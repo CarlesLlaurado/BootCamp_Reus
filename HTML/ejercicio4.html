@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <style>
+        table {
+            display: inline-table;
+            border-collapse: collapse;
+            margin: 10px;
+        }
+        tr, td, th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">Ejercicios de tablas</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tfoot>
+                <th colspan="3">Apartado A</th>
+            </tfoot>
+        </table>
+    </span>
+    <span>
+        <table>
+            <thead>
+                <th colspan="3">Ejercicios de tablas</th>
+            </thead>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td colspan="2">2</td>
+            </tr>
+                <td rowspan="2">4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tfoot>
+                <th colspan="3">Apartado A</th>
+            </tfoot>
+        </table>
+    </span>
+</body>
+</html>
