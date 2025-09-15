@@ -1,0 +1,25 @@
+div span {
+    text-align: center;
+    background-color: lightblue;
+    font-size: larger;
+    font-weight: bold;
+}
+table{
+    border: 5px solid black;
+    width: 500px;
+    text-align: center;
+    font-size: 20px;
+    background-color: lightsalmon;
+    border-radius: 20px 20px 0 0;
+}
+td{
+    border-left: 1px solid black;
+    border-bottom: 3px solid black;
+}
+th{
+    padding-top: 10px;
+}
+tfoot td {
+    background-color: lightblue;
+    border: none;
+}

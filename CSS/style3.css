@@ -1,0 +1,22 @@
+*{
+    color: blue;
+}
+p{
+    color: red;
+}
+#title-1{
+    color: green;
+}
+
+[id]{
+    color: purple;
+}
+[id="title-1"]{
+    color: orange;
+}
+a $.com{
+    color: pink;
+}
+[^=title]{
+    color: brown !important;
+}

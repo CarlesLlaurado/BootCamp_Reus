@@ -1,0 +1,20 @@
+html{ 
+    background-color: lightsalmon;
+}
+p{
+    column-count: 3;
+    column-rule-style: solid;
+    column-gap: 40px;
+    column-rule-color: red;
+    column-rule-width: 2px;
+}
+h1{
+    color: red;
+}
+h1 span:hover{
+    color: blue;
+}
+p::selection{
+    background-color: yellow;
+    color: blue;
+}

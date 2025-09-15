@@ -1,0 +1,17 @@
+img {
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+input:in-range {
+    background-color: lightgreen;
+}
+input:out-of-range {
+    background-color: lightcoral;
+}
+input{
+    width: 80px;
+}

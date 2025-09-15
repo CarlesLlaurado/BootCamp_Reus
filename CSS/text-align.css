@@ -1,0 +1,20 @@
+html{
+    background-color: lightyellow;
+}
+p {
+    border: 1px solid black;
+    margin: 40px 150px;
+    padding: 10px;
+    background-color: lightblue;
+
+}
+.p1 {
+    text-align: left;
+}
+
+.p2 {
+    text-align: center;
+}
+.p3 {
+    text-align: right;
+}

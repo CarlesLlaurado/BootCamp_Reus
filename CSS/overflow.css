@@ -1,0 +1,14 @@
+.hidden {
+    background-color: greenyellow;
+    padding: 20px 5px;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+.auto {
+    background-color: greenyellow;
+    padding: 20px 5px;
+    width: 250px;
+    height: 250px;
+    overflow: auto;
+}
