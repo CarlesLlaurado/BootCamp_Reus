@@ -1,0 +1,30 @@
+body{
+    margin: 50px;
+}
+.diana{
+    background-color: red;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    border: solid black 3px;
+    display: grid;
+    place-items: center;
+    box-shadow: -5px 5px 20px 10px black;
+
+}
+.circle{
+    background-color: red;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.css1 {height: 400px; width: 400px; background-color: white;}
+.css2 {height: 300px; width: 300px;}
+.css3 {height: 200px; width: 200px; background-color: darkblue;}
+.star {height: 150px; width: 150px; font-size: 270px; background-color: darkblue; color: white;}
+
