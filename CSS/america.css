@@ -28,3 +28,10 @@ body{
 .css3 {height: 200px; width: 200px; background-color: darkblue;}
 .star {height: 150px; width: 150px; font-size: 270px; background-color: darkblue; color: white;}
 
+.star{
+    -webkit-animation:spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+
