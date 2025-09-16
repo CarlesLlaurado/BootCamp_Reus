@@ -1,0 +1,27 @@
+header{
+    background-color: red;
+    width: 100%;
+    height: 100px;}
+nav{
+    background-color: blue;
+    width: 100%;
+    height: 30px;
+}
+section{
+    background-color: pink;
+    float: left;
+    width: 60%;
+    height: 900px;
+}
+aside{
+    background-color: purple;
+    width: 35%;
+    height: 900px;
+    float: right;
+}
+footer{
+    background-color: yellowgreen;
+    width: 100%;
+    height: 30px;
+    clear: both;
+}
