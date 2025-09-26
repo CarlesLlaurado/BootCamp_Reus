@@ -22,23 +22,57 @@ body{
     align-items: center;
     color: white;
     font-weight: bold;
-    padding: 0 10px;
+    padding: 0 5px;
     box-sizing: border-box;
 }
 .themes h1{
     margin: 0;
 }
+
+
+.theme-switcher{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.numbers{
+    display: flex;
+    justify-content: space-around;
+}
+.toggle{
+    width: 70px;
+    height: 25px;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+
+}
+.circle{
+    background-color: hsl(6, 63%, 50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    position: absolute;
+    align-items: center;
+    align-self: center;
+
+    transition: transform 0.3s ease;
+}
+
+.toggle[data-theme="1"] .circle { transform: translateX(0px);}
+.toggle[data-theme="2"] .circle { transform: translateX(22px);}
+.toggle[data-theme="3"] .circle { transform: translateX(43px);}
+
 .themes .dreta{
     display: flex;
     flex-direction: row;
     gap: 30px;
-}
-.dreta h2{
     font-size: x-small;
 }
-.dreta button{
-    background-color: hsl(223, 31%, 20%);
-    border-radius: 5px;
+.dreta h3{
+    align-self: center;
 }
 .display{
     background-color: hsl(224, 36%, 15%);
