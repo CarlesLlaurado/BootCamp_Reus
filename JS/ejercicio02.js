@@ -21,8 +21,12 @@ mostrarBoolean(false);
 
 */
 
+/*
+
 const infinitos = (...nums) => {
     nums.forEach(num => console.log(num));
 }
 
 infinitos(1,2,3,4,5);
+
+*/
