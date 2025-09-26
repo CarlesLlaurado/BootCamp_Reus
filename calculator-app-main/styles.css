@@ -1,0 +1,122 @@
+body{
+    background-color: hsl(222, 26%, 31%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.calculadora{
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.themes{
+    background-color: hsl(222, 26%, 31%);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.themes h1{
+    margin: 0;
+}
+.themes .dreta{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.dreta h2{
+    font-size: x-small;
+}
+.dreta button{
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 5px;
+}
+.display{
+    background-color: hsl(224, 36%, 15%);
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.displaytext{
+    color: white;;
+    width: 100%;
+    margin: 0;
+    font-size: 4rem;
+    font-weight: bold;
+}
+.pad{
+    background-color: hsl(223, 31%, 20%);
+    width: 100%;
+    flex: 1;
+    border-radius: 15px;
+    padding: 25px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 25px;
+}
+.pad button{
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: xx-large;
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(221, 14%, 31%);
+
+    box-shadow: 0 4px hsl(28, 16%, 65%);
+    transition: all 0.1s ease-in-out;
+}
+
+.pad button:active{
+    box-shadow: 0px 2px hsl(27, 10%, 51%);
+    transform: translateY(2px);
+}
+
+.pad button.blue{
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 4px hsl(224, 28%, 35%);
+    color: hsl(0, 100%, 100%) ;
+}
+.pad button.blue:active{
+    background-color: hsl(230, 40%, 75%);
+    box-shadow: 0px 2px hsl(230, 20%, 45%);
+    transform: translateY(2px);
+}
+
+.pad button.red{
+    color: white;
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0 4px hsl(25, 99%, 27%);
+}
+.pad button.red:active{
+    background-color: hsl(11, 82%, 76%);
+    box-shadow: 0 2px hsl(6, 70%, 34%);
+    transform: translateY(2px);
+}
+.tecla{
+    width: 100%;
+    height: 100%;
+}
+.reset{
+    grid-area: 5 / 1 / 6 / 3;
+}
+.igual{
+    grid-area: 5 / 3 / 6 / 5;
+}
