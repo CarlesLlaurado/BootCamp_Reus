@@ -1,5 +1,4 @@
 const toggle = document.querySelector(".toggle");
-
 let estado = 1;
 
 toggle.addEventListener("click", () => {
@@ -8,8 +7,6 @@ toggle.addEventListener("click", () => {
     } else {
         estado = estado + 1;
     }
-    toggle.setAttribute("data-theme", estado);
-
-    console.log(estado);
+    document.body.setAttribute("data-theme", estado);
 });
 

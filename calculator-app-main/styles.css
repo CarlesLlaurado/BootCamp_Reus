@@ -55,15 +55,13 @@ body{
     height: 15px;
     border-radius: 20px;
     position: absolute;
-    align-items: center;
     align-self: center;
-
     transition: transform 0.3s ease;
 }
 
-.toggle[data-theme="1"] .circle { transform: translateX(0px);}
-.toggle[data-theme="2"] .circle { transform: translateX(22px);}
-.toggle[data-theme="3"] .circle { transform: translateX(43px);}
+body[data-theme="1"] .circle { transform: translateX(0px);}
+body[data-theme="2"] .circle { transform: translateX(21px);}
+body[data-theme="3"] .circle { transform: translateX(43px);}
 
 .themes .dreta{
     display: flex;
@@ -119,7 +117,8 @@ body{
 }
 
 .pad button:active{
-    box-shadow: 0px 2px hsl(27, 10%, 51%);
+    background-color: hsl(15, 10%, 92%);
+    box-shadow: 0px 2px hsl(35, 11%, 61%);
     transform: translateY(2px);
 }
 
@@ -153,4 +152,93 @@ body{
 }
 .igual{
     grid-area: 5 / 3 / 6 / 5;
+}
+
+body[data-theme="2"] {
+    background-color: hsl(0, 0%, 90%);
+
+    .themes{
+        background-color: hsl(0, 0%, 90%);
+        color: hsl(60, 10%, 19%);
+    }
+    .toggle{
+        background-color: hsl(0, 5%, 81%);
+    }
+    .circle{
+        background-color: hsl(25, 98%, 40%);
+    }
+    .display{
+        background-color: hsl(0, 0%, 93%);
+    }
+    .displaytext{
+        color: hsl(60, 10%, 19%);
+    }
+    .pad{
+        background-color: hsl(0, 5%, 81%);
+    }
+    .pad button.blue{
+        background-color: hsl(185, 42%, 37%);
+        box-shadow: 0 4px hsl(185, 58%, 25%);
+    }
+    .pad button.blue:active{
+        background-color: hsl(190, 61%, 53%);
+        box-shadow: 0 2px hsl(190, 65%, 28%);
+    }
+    .pad button.red{
+        background-color: hsl(25, 98%, 40%);
+        box-shadow: 0 4px hsl(25, 99%, 27%);
+    }
+    .pad button.red:active{
+        background-color: hsl(30, 81%, 55%);
+        box-shadow: 0 2px hsl(30, 91%, 30%);
+    }
+}
+body[data-theme="3"] {
+    background-color: hsl(268, 75%, 9%);
+
+    .themes{
+        background-color: hsl(268, 75%, 9%);
+        color: hsl(52, 100%, 62%);
+    }
+    .toggle{
+        background-color: hsl(268, 71%, 12%);
+    }
+    .circle{
+        background-color: hsl(176, 100%, 44%);
+    }
+    .display{
+        background-color: hsl(268, 71%, 12%);
+    }
+    .displaytext{
+        color: hsl(52, 100%, 62%);
+    }
+    .pad{
+        background-color: hsl(268, 71%, 12%);
+    }
+    .pad button{
+        background-color: hsl(281, 89%, 26%);
+        box-shadow: hsl(285, 91%, 52%);
+        color: hsl(52, 100%, 62%);
+    }
+    .pad button:active{
+        background-color: hsl(280, 82%, 53%);
+        box-shadow: hsl(285, 84%, 63%);
+    }
+    .pad button.blue{
+        background-color: hsl(268, 47%, 21%);
+        box-shadow: 0 4px hsl(290, 70%, 36%);
+    }
+    .pad button.blue:active{
+        background-color: hsl(281, 82%, 53%);
+        box-shadow: 0 2px hsl(290, 70%, 24%);
+    }
+    .pad button.red{
+        background-color: hsl(176, 100%, 44%);
+        box-shadow: 0 4px hsl(177, 92%, 70%);
+        color: hsl(198, 20%, 13%);
+    }
+    .pad button.red:active{
+        background-color: hsl(176, 100%, 50%);
+        box-shadow: 0 2px hsl(177, 41%, 34%);
+    }
 }
