@@ -59,10 +59,6 @@ body{
     transition: transform 0.3s ease;
 }
 
-body[data-theme="1"] .circle { transform: translateX(0px);}
-body[data-theme="2"] .circle { transform: translateX(21px);}
-body[data-theme="3"] .circle { transform: translateX(43px);}
-
 .themes .dreta{
     display: flex;
     flex-direction: row;
@@ -154,6 +150,10 @@ body[data-theme="3"] .circle { transform: translateX(43px);}
     grid-area: 5 / 3 / 6 / 5;
 }
 
+body[data-theme="1"] .circle { transform: translateX(0px);}
+body[data-theme="2"] .circle { transform: translateX(21px);}
+body[data-theme="3"] .circle { transform: translateX(43px);}
+
 body[data-theme="2"] {
     background-color: hsl(0, 0%, 90%);
 
@@ -215,9 +215,11 @@ body[data-theme="2"] {
 
 body[data-theme="3"] {
     background-color: hsl(268, 75%, 9%);
+    background-image: url(images/planteasbackground.png);
+    background-size: cover;
 
     .themes{
-        background-color: hsl(268, 75%, 9%);
+        background-color: transparent ;
         color: hsl(52, 100%, 62%);
     }
     .toggle{
