@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+}
+.green { background: green;}
+.yellow { background: yellow; justify-items: flex-end;}
+.red { background: red; align-content: flex-end;}
+.blue { background: blue; align-content: flex-end; justify-items: flex-end;}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+    width: 80%;
+}
+.play{
+    align-items: flex-end;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.healthbar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    background: black;
+    border-radius: 20px;
+}
+.greenbar{
+    width: 100%;
+    background-color: yellowgreen;
+    border-radius: 20px;
+    height: 12px;
+    margin: 8px;
+}
+.ammount{
+    align-self: flex-start;
+}
+
+.tamagochi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.tamagochi img{
+    width: 400px;
+}
