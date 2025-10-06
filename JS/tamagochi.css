@@ -25,6 +25,12 @@ body{
     justify-content: space-between;
     width: 50%;
 }
+.btn-1{
+    background-image: url(images/cookiearam.jpeg);
+    background-size: cover;
+    border: none;
+    border-radius: 100px;
+}
 button{
     width: 50px;
     height: 50px;
@@ -46,6 +52,7 @@ button{
     border-radius: 20px;
     height: 12px;
     margin: 8px;
+    transition: width 0.4s ease;
 }
 .ammount{
     align-self: flex-start;
