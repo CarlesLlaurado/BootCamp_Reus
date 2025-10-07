@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <section class="redsection">
+        <div class="players player1"><img id="player1-img" src="images/rock.png" alt=""></div>
+    </section>
+    <section class="bluesection">
+        <div class="players player2"><img id="player2-img" src="images/rock.png" alt=""></div>
+    </section>
+
+    <div class="botones">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
 
     <p id="result"></p>
-    
 
     <script src="main.js"></script>
 </body>
+
 </html>
