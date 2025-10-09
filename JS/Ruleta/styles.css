@@ -1,0 +1,219 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.casino {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 200px;
+    height: 100%;
+    gap: 20px;
+    background-color: green;
+}
+
+.ruleta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background-color: red;
+}
+
+.tablero-section {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: black;
+}
+
+.fichas-section {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: yellow;
+}
+
+.baseruleta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 580px;
+    height: 580px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: brown;
+}
+
+.pointer {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 50px solid gold;
+    z-index: 1;
+}
+
+.ruleta {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: auto;
+    background: conic-gradient(green 0deg 9.73deg,
+            /* 0 */
+            red 9.73deg 19.46deg,
+            /* 32 */
+            black 19.46deg 29.19deg,
+            /* 15 */
+            red 29.19deg 38.92deg,
+            /* 19 */
+            black 38.92deg 48.65deg,
+            /* 4 */
+            red 48.65deg 58.38deg,
+            /* 21 */
+            black 58.38deg 68.11deg,
+            /* 2 */
+            red 68.11deg 77.84deg,
+            /* 25 */
+            black 77.84deg 87.57deg,
+            /* 17 */
+            red 87.57deg 97.3deg,
+            /* 34 */
+            black 97.3deg 107.03deg,
+            /* 6 */
+            red 107.03deg 116.76deg,
+            /* 27 */
+            black 116.76deg 126.49deg,
+            /* 13 */
+            red 126.49deg 136.22deg,
+            /* 36 */
+            black 136.22deg 145.95deg,
+            /* 11 */
+            red 145.95deg 155.68deg,
+            /* 30 */
+            black 155.68deg 165.41deg,
+            /* 8 */
+            red 165.41deg 175.14deg,
+            /* 23 */
+            black 175.14deg 184.87deg,
+            /* 10 */
+            red 184.87deg 194.6deg,
+            /* 5 */
+            black 194.6deg 204.33deg,
+            /* 24 */
+            red 204.33deg 214.06deg,
+            /* 16 */
+            black 214.06deg 223.79deg,
+            /* 33 */
+            red 223.79deg 233.52deg,
+            /* 1 */
+            black 233.52deg 243.25deg,
+            /* 20 */
+            red 243.25deg 252.98deg,
+            /* 14 */
+            black 252.98deg 262.71deg,
+            /* 31 */
+            red 262.71deg 272.44deg,
+            /* 9 */
+            black 272.44deg 282.17deg,
+            /* 22 */
+            red 282.17deg 291.9deg,
+            /* 18 */
+            black 291.9deg 301.63deg,
+            /* 29 */
+            red 301.63deg 311.36deg,
+            /* 7 */
+            black 311.36deg 321.09deg,
+            /* 28 */
+            red 321.09deg 330.82deg,
+            /* 12 */
+            black 330.82deg 340.55deg,
+            /* 35 */
+            red 340.55deg 350.28deg,
+            /* 3 */
+            black 350.28deg 360deg
+            /* 26 */
+        );
+    transition: transform 4s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.numbers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.resultado {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 80px;
+  font-weight: bold;
+  z-index: 10;
+  text-align: center;
+  transition: opacity 0.3s;
+}
+.numeros {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none; /* para que no interfiera con clics */
+}
+
+.numero {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  transform-origin: center center;
+}
+.numero {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  transform-origin: center center;
+}
