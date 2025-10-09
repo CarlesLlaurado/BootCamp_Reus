@@ -205,15 +205,3 @@ body {
   color: white;
   transform-origin: center center;
 }
-.numero {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 16px;
-  color: white;
-  transform-origin: center center;
-}
