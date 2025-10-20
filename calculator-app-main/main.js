@@ -13,6 +13,7 @@ toggle.addEventListener("click", () => {
 const displayText = document.querySelector(".displaytext");
 
 let display = "";
+let operacion = [];
 
 const teclas = document.querySelectorAll(".tecla");
 
@@ -29,16 +30,50 @@ teclas.forEach(tecla => {
             displayText.textContent = display || "0";
         }
         else if (valor === "+") {
-            display += "+";
-            displayText.textContent = display;
+            operacion.push(Number(display));
+            operacion.push("+");
+            display = "";
+            displayText.textContent = "+";
         }
         else if (valor === "-") {
-            display += "-";
+            operacion.push(Number(display));
+            operacion.push("-");
+            display = "";
+            displayText.textContent = "-";
+        }
+        else if (valor === "/") {
+            operacion.push(Number(display));
+            operacion.push("/");
+            display = "";
+            displayText.textContent = "/";
+        }
+        else if (valor === "x") {
+            operacion.push(Number(display))
+            operacion.push("*");
+            display = "";
+            displayText.textContent = "x";
+        }
+        else if (valor === "=") {
+            operacion.push(Number(display));
+
+            let resultado = operacion[0];
+            for (let i = 1; i < operacion.length; i += 2) {
+                const operador = operacion[i];
+                const siguiente = operacion[i + 1];
+
+                if (operador === "+") resultado += siguiente;
+                if (operador === "-") resultado -= siguiente;
+                if (operador === "*") resultado *= siguiente;
+                if (operador === "/") resultado /= siguiente;
+            }
+            resultado = parseFloat(resultado.toFixed(4));
+            display = resultado.toString();
             displayText.textContent = display;
+            operacion = [];
         }
 
         else {
-            if (display.length >= 17) return;
+            if (display.length >= 16) return;
 
             display += valor;
             displayText.textContent = display;
