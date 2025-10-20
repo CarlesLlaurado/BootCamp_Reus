@@ -1,0 +1,265 @@
+/*
+Colors:
+
+Text: 1A1A1A
+Green: #00B172
+White: #FFF
+
+*/
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    margin: 0;
+}
+.navbar-container{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+
+}
+.navbar-logo{
+    width: 150px;
+}
+.navbar-links{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px ;
+    transition: all 0.3s ease;
+}
+ul li a:hover{
+    background-color: #00B172;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.landingphoto{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: grid;
+
+    background: url("../images/landing.jpg") center center;
+    background-size: cover;
+}
+.landingtext{
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.landingp{
+    width: 700px;
+    text-align: center;
+}
+.sectionicons{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1%;
+    padding-bottom: 2%;
+}
+h2{
+    margin: 40px;
+    padding-bottom: 30px;
+}
+.icons{
+    width: 20%;
+}
+.iconsdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.iconsimg{
+    max-width: 60%;
+    height: auto;
+}
+.quality{
+    padding-bottom: 15px;
+}
+.greensection{
+    background-color: #00B172;
+    width: 76%;
+    margin: 0px 2%;
+    padding: 5% 10%;
+    padding-bottom: 0%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.whitegreen{
+    color: white;
+}
+.kanyebody{
+    width: 50%;
+    font-size: larger;
+    min-width: 250px;
+    min-height: 500px ;
+}
+.whitelogodiv{
+    width: 13%;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+.whiteicon{
+    width: 100%;
+}
+.kanyeimg{
+    width: 30%;
+    max-width: 280px;
+    min-width: 250px;
+    align-content: center;
+    padding-top: 3%;
+}
+.kanye{
+    width: 100%;
+    min-height: 300px;
+    max-height: 500px;
+}
+h4{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: xx-large;
+    margin: 0px;
+}
+h5{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+/* Tablet Display */
+@media (min-width: 426px) and (max-width: 1023px) {
+    .navbar-logo{
+        width: 150px;
+        padding-bottom: 15px;
+    }
+    .navbar-container{
+        flex-direction: column;
+        padding: 3%;
+    }
+    .landingphoto{
+        height: calc(100vh - 50vh);
+    }
+    .landingtext{
+        font-size: large;
+    }
+    .landingp{
+        width: calc(100vh - 60vh);
+        padding-bottom: 0px;
+    }
+    h2{
+        padding: 0px;
+    }
+    .whitegreen, h4, h5{
+        font-size: medium;
+        display: flex;
+        flex-direction: column;
+    }
+    h4{
+        width: 100%;
+        font-size: x-large;
+        min-width: 350px;
+    }
+    .greensection{
+        padding-bottom: 0%;
+    }
+    .kanyebody{
+        max-width: none;
+        min-width: 200px;
+    }
+    .whitegreen{
+        width: 50%;
+    }
+    .kanyeimg{
+       padding-top: 0%; 
+        min-width: 100px;
+    }
+    .whitelogodiv{
+        height: 0;
+        width: 0%;
+    }
+}
+/* Phone Display */
+@media (max-width: 425px) {
+    .navbar-logo{
+        width: 120px;
+        padding-bottom: 15px;
+    }
+    .navbar-container{
+        flex-direction: column;
+        padding: 5%;
+        height: fit-content;
+        align-items: flex-start;
+    }
+    .navbar-links{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .landingphoto{
+        height: calc(100vh - 50vh);
+
+    }
+    .landingtext{
+        font-size: smaller;
+        width: 90%;
+        text-align: center;
+        justify-self: center;
+    }
+    .landingp{
+        width: 90%;
+    }
+    h2{
+        padding: 0;
+    }
+    .iconsdiv{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .icons{
+        width: 60%;
+    }
+    .iconsimg{
+        width: 80%;
+        min-width: 80px;
+        min-height: 60px;
+    }
+    .whitegreen, h4, h5{
+        font-size: small;
+    }
+    h4{
+        width: 60%;
+    }
+    .kanyebody{
+        min-height: 300px;
+        min-height: 300px;
+    }
+    .whitegreen{
+        text-align: -webkit-center;
+    }
+    .greensection{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 10%;
+    }
+    .whitelogodiv{
+        height: 20%;
+        width: 30%;
+        margin: 5%;
+        position: static;
+    }
+}

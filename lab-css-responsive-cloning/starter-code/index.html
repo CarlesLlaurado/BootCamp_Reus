@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Lab | Responsive Cloning | Product Hunt</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="flex" style="width: 100%;">
+        <div class="flex nav-container">
+        <div class="flex" style="gap: 20px;">
+          <div class="mobile-menu">
+            <svg
+              width="30px"
+              height="30px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6H20M4 12H20M4 18H20"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <img class="logo" src="./images/logo.png" alt="" />
+          <button class="search-laptop flex">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                stroke="#85889C"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="search-desktop flex">
+            <svg
+              class="lupa"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                stroke="#85889C"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              class="nav-input"
+              type="text"
+              placeholder="    Search ( ctrl + k )"
+            />
+          </div>
+        </div>
+        <div class="nav-links">
+          <ul class="flex nav-list">
+            <li>
+              Launches
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                  fill="#000000"
+                />
+              </svg>
+            </li>
+            <li>
+              Products
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                  fill="#000000"
+                />
+              </svg>
+            </li>
+            <li>
+              News
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                  fill="#000000"
+                />
+              </svg>
+            </li>
+            <li>
+              Forums
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"
+                  fill="#000000"
+                />
+              </svg>
+            </li>
+            <li class="show-desktop">Advertise</li>
+          </ul>
+        </div>
+        <div class="flex" style="gap: 15px">
+          <button class="subscribe-btn flex" type="button">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6.10156C19.3001 6.22944 20.1752 6.51846 20.8284 7.17164C22 8.34322 22 10.2288 22 14.0001C22 17.7713 22 19.6569 20.8284 20.8285C19.6569 22.0001 17.7712 22.0001 14 22.0001H10C6.22876 22.0001 4.34315 22.0001 3.17157 20.8285C2 19.6569 2 17.7713 2 14.0001C2 10.2288 2 8.34322 3.17157 7.17164C3.82475 6.51846 4.69989 6.22944 6 6.10156"
+                stroke="#1C274C"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10 6H14"
+                stroke="#1C274C"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M11 9H13"
+                stroke="#1C274C"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M8.1589 11.7991L7.43926 11.1994C6.73152 10.6096 6.37764 10.3147 6.18882 9.91156C6 9.50842 6 9.04778 6 8.1265V7C6 4.64298 6 3.46447 6.73223 2.73223C7.46447 2 8.64298 2 11 2H13C15.357 2 16.5355 2 17.2678 2.73223C18 3.46447 18 4.64298 18 7V8.1265C18 9.04778 18 9.50842 17.8112 9.91156C17.6224 10.3147 17.2685 10.6096 16.5607 11.1994L15.8411 11.7991C14.0045 13.3296 13.0861 14.0949 12 14.0949C10.9139 14.0949 9.99553 13.3296 8.1589 11.7991Z"
+                stroke="#1C274C"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M6 10L8.1589 11.7991C9.99553 13.3296 10.9139 14.0949 12 14.0949C13.0861 14.0949 14.0045 13.3296 15.8411 11.7991L18 10"
+                stroke="#1C274C"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            Subscribe
+          </button>
+          <button class="login-btn flex" type="button">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.92893 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.0222 21.4135 8.08879 20.3147 6.4443C19.2159 4.79981 17.6541 3.51808 15.8268 2.76121C13.9996 2.00433 11.9889 1.8063 10.0491 2.19215C8.10929 2.578 6.32746 3.53041 4.92893 4.92893"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M15 12L15.7809 11.3753L16.2806 12L15.7809 12.6247L15 12ZM3 13C2.44771 13 2 12.5523 2 12C2 11.4477 2.44771 11 3 11V13ZM11.7809 6.3753L15.7809 11.3753L14.2191 12.6247L10.2191 7.6247L11.7809 6.3753ZM15.7809 12.6247L11.7809 17.6247L10.2191 16.3753L14.2191 11.3753L15.7809 12.6247ZM15 13H3V11H15V13Z"
+                fill="currentColor"
+              />
+            </svg>
+            Sign in
+          </button>
+        </div>
+        </div>
+      </nav>
+    </header>
+
+<div class="pagina">
+  <div class="welcome">
+    <p class="phand">👋🏿</p>
+    <p class="p1">Welcome to Product Hunt</p>
+    <p class="p2">Get the best new products in your inbox, daily</p>
+    <input type="text" placeholder="Your email">
+    <button>Susbscribe</button>
+    <button class="close">✕</button>
+  </div>
+
+  <div class="contenedor">
+    
+    <div class="principal">
+      <div class="popular">
+        <div class="populartop">
+            <div class="populartitle">Popular this week</div>
+            <button class="close">✕</button>
+        </div>
+        <div class="line"></div>
+        <div class="popularsection">
+            <div><img src="images/popular-this-week/app-1.png" alt="" class="sectionimg"></div>
+            <div class="sectiontext">
+                <p class="p1">Duolingo Bots</p>
+                <p class="p2">AI powered characteres to teach languages conversation</p>
+                <div class="sectionbuttons"><button><img src="images/votes.png" alt=""> 1460</button><button><img src="images/comments.png" alt=""> 49</button></div>
+            </div>
+            <div class="sectionphone"><button>IPHONE</button> + 2</div>
+        </div>
+        <div class="fullline"></div>
+        <div class="popularsection">
+            <div><img src="images/popular-this-week/app-2.png" alt="" class="sectionimg"></div>
+            <div class="sectiontext">
+                <p class="p1">Tribe 2.0</p>
+                <p class="p2">Introducing AUgmented Messaging</p>
+                <div class="sectionbuttons"><button><img src="images/votes.png" alt=""> 1466</button><button><img src="images/comments.png" alt=""> 188</button></div>
+            </div>
+            <div class="sectionphone"><button>ANDROID</button> + 4</div>
+        </div>
+        <div class="fullline"></div>
+        <div class="popularsection">
+            <div><img src="images/popular-this-week/app-3.png" alt="" class="sectionimg"></div>
+            <div class="sectiontext">
+                <p class="p1">Workplace by Facebook</p>
+                <p class="p2">Connect everyone in your company and turn ideas into action</p>
+                <div class="sectionbuttons"><button><img src="images/votes.png" alt=""> 1003</button><button><img src="images/comments.png" alt=""> 80</button></div>
+            </div>
+            <div class="sectionphone"><button>ANDROID</button> + 2</div>
+        </div>
+      </div>
+
+      <div class="today">
+        <div class="todaytop">
+            <div class="todaytitle">Today</div>
+            <button class="close">✕</button>
+        </div>
+        <div class="line"></div>
+        <div class="todaysection">
+            <div><img src="images/today/app-1.png" alt="" class="sectionimg"></div>
+            <div class="sectiontext">
+                <p class="p1">Sprayscape</p>
+                <p class="p2"></p>A perfectly imperfect VR-ish camera experiment, by Google</p>
+                <div class="sectionbuttons"><button><img src="images/votes.png" alt=""> 82</button><button><img src="images/comments.png" alt=""> 8</button></div>
+            </div>
+            <div class="sectionphone"><button>ANDROID</button> + 3</div>
+        </div>
+        <div class="fullline"></div>
+        <div class="todaysection">
+            <div><img src="images/today/app-2.png" alt="" class="sectionimg"></div>
+            <div class="sectiontext">
+                <p class="p1">Ask Gary Vee</p>
+                <p class="p2">The unofficial Gary Vee persona chatbot on Messenger!</p>
+                <div class="sectionbuttons"><button><img src="images/votes.png" alt=""> 21</button><button><img src="images/comments.png" alt=""> 9</button></div>
+            </div>
+            <div class="sectionphone"><button>GET SHIT DONE</button> + 1</div>
+        </div>
+        <div class="fullline"></div>
+        <div class="todaysection">
+            <div><img src="images/today/app-3.png" alt="" class="sectionimg"></div>
+            <div class="sectiontext">
+                <p class="p1">The Electron Wheel</p>
+                <p class="p2">Turn your standard bycicle into an electric bike.</p>
+                <div class="sectionbuttons"><button><img src="images/votes.png" alt=""> 23</button><button><img src="images/comments.png" alt=""> 2</button></div>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <div class="lateral">
+      <div class="kittybot">
+        <div class="kitty-1">
+            <p>Kitty bot for Slack.</p>
+            <button class="close">x</button>
+        </div>
+        <p class="text">A friendly feline that sens you cool new things</p>
+        <button># ADD KITTYBOT TO SLACK</button>
+      </div>
+      <div class="livechat">
+        <div class="live-1">UPCOMING LIVE CHATS</div>
+        <div class="linea"></div>
+        <div class="profile">
+            <div class="profileimg"><img src="images/today/app-2.png" alt=""></div>
+            <div class="infoprofile"><strong>Adam Besvinick</strong><p>VC at Deep Fork Capital</p><button>REMIND ME</button></div>
+        </div>
+        <div class="profile">
+            <div class="profileimg"><img src="images/today/app-2.png" alt=""></div>
+            <div class="infoprofile"><strong>Adam Besvinick</strong><p>VC at Deep Fork Capital</p><button>REMIND ME</button></div>
+        </div>
+        <div class="profile">
+            <div class="profileimg"><img src="images/today/app-2.png" alt=""></div>
+            <div class="infoprofile"><strong>Adam Besvinick</strong><p>VC at Deep Fork Capital</p><button>REMIND ME</button></div>
+        </div>
+        <div class="profile">
+            <div class="profileimg"><img src="images/today/app-2.png" alt=""></div>
+            <div class="infoprofile"><strong>Adam Besvinick</strong><p>VC at Deep Fork Capital</p><button>REMIND ME</button></div>
+        </div>
+        <div class="profile">
+            <div><img src="images/today/app-2.png" alt=""></div>
+            <div class="infoprofile"><strong>Adam Besvinick</strong><p>VC at Deep Fork Capital</p><button>REMIND ME</button></div>
+        </div>
+        <div class="linea"></div>
+        <div class="live-2">SEE MORE</div>
+      </div>
+      <div class="tweets">
+        <div class="tweets-1"><p class="strong">Tweets</p><p class="grey">liked by</p></div>
+        
+        <div class="tweets-2">@ProductHuntLOVE</div>
+        <div class="linea"></div>
+
+        <div class="tweetprofile">
+            <div class="tweetimgdiv"><img src="images/today/app-2.png" alt="" class="tweetimg"></div>
+            <div class="tweetname"><strong>Eric </strong><p>@Gordinxi</p></div>
+            <div class="tweetlogo">🐥</div>
+        </div>
+        <div class="tweetcontent">Hey! I’m <span class="mention">@Eric</span> 🎸 I love playing guitar and living that Rock & Roll life 🤘</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

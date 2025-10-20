@@ -1,0 +1,599 @@
+
+// body {
+//   background: #f9f9f9;
+//   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+//   color: #344054;
+//   margin: 0px;
+//   padding: 0px;
+//   width: 100vw;
+//   height: 120vh;
+//   overflow-x: hidden;
+  
+// }
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #F7F7F7 ;
+  display: flex;
+  justify-content: center;
+  margin: 5% 0%;
+}
+.welcome {
+  background-color: orange;
+  width: 60dvw;
+  height: 30px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+z-index: 90 !important;
+
+
+}
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important; /* Agregar esta línea */
+  width: 100vw;
+  height: 40px;
+ padding-top: 20px;
+ padding-bottom: 20px;
+  border-bottom: #eaecf0 2px solid;
+  background-color: white;
+  font-size: large;
+  justify-content: space-evenly !important;
+  gap: 10px;
+}
+
+.nav-container {
+  justify-content: space-between; 
+  width: 80%;
+}
+.nav-list {
+  padding: 0px;
+  gap: 20px;
+}
+.nav-list li {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+.nav-list li svg {
+  width: 20px;
+}
+
+.logo {
+  width: 50px;
+}
+.lupa {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin-right: 170px;
+}
+.nav-input {
+  border-radius: 50px;
+  height: 40px;
+  background-color: #eaecf0;
+  border: none;
+  padding-left: 20px;
+  font-size: medium;
+}
+
+.login-btn {
+  background-color: rgb(255 97 84 / var(--tw-bg-opacity, 1));
+  color: white;
+  border-radius: 50px;
+  padding: 10px;
+  border: none;
+  gap: 5px !important;
+  width: 100px;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.login-btn svg {
+  width: 20px;
+}
+
+.subscribe-btn {
+  background-color: white;
+  border: 2px solid #eaecf0;
+  border-radius: 50px;
+  padding: 10px;
+  color: #344054;
+  gap: 5px !important;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.subscribe-btn svg {
+  width: 20px;
+}
+
+.search-laptop {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid #85889C;
+  display: none;
+  background-color: white;
+}
+.search-laptop svg {
+  height: 20px;
+  width: 20px;
+}
+
+  .mobile-menu {
+    display: none;
+  }
+@media (max-width: 767px) {
+    nav {
+
+  justify-content: space-between !important;
+
+  }
+
+
+  .nav-links {
+    display: none;
+  }
+ 
+  .search-laptop {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+    .search-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+
+  nav {
+
+  justify-content: space-between !important;
+
+  }
+
+
+  .search-desktop {
+    display: none;
+  }
+
+  .search-laptop {
+    display: flex;
+  }
+
+  .show-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1100px) {
+   .show-desktop {
+    display: list-item;
+  }
+}
+
+
+.pagina{
+  width: 80%;
+  margin-top: 10px;
+}
+.welcome{
+  background-color: white;
+  border: 1px solid lightgrey;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding: 1%;
+  box-sizing: border-box;
+  .phand{
+    font-size: x-large;
+  }
+  .p1{
+    font-size: large;
+    font-weight: bold;
+  }
+  .p2{
+    color: grey;
+  }
+  input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  button{
+    color: white;
+    font-weight: bold;
+    background-color: orange;
+    border: 1px orange solid;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  .close{
+    border-radius: 500px;
+    padding: 10px 13px ;
+    margin: 0px 0px 0px 120px;
+  }
+  button:hover{
+    background-color: white;
+    color: orange;
+    border: 1px orange solid;
+  }
+}
+.contenedor{
+  
+  display: flex;
+  gap: 10px;
+  
+  .principal{
+    background-color: #F7F7F7;
+    width: 60%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+
+    .popular{
+      background-color: white;
+      border: 1px solid lightgrey;
+      
+      .populartop{
+        display: flex;
+        padding: 20px 30px;
+      
+        .populartitle{
+          flex: 1;
+          font-size: 20px;
+        }
+        button{
+          cursor: pointer;
+        }
+      }
+      .line{
+        width: 95%;
+        height: 1px;
+        background-color: lightgrey;
+        justify-self: center;
+      }
+      .popularsection{
+        padding: 20px;
+        display: flex;
+        gap: 30px;
+
+        .sectiontext{
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          p{
+            margin: 0px;
+          }
+          .p1{
+            font-size: larger;
+          }
+          .p2{
+            font-size: smaller;
+            color: grey;
+          }
+          .sectionbuttons{
+            padding-top: 23px;
+            display: flex;
+            gap: 10px;
+            button{
+              display: flex;
+              align-self: center;
+              gap: 5px;
+              align-items: center;
+              height: 20px;
+            }
+          }
+        }
+        .sectionphone{
+          align-self: flex-end;
+          button{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .fullline{
+      width: 100%;
+      height: 1px;
+      background-color: lightgrey;
+    }
+    .today{
+      background-color: white;
+      border: 1px solid lightgrey;
+
+      .todaytop{
+        display: flex;
+        padding: 20px 30px;
+
+        .todaytitle{
+          flex: 1;
+          font-size: 20px;
+        }
+        button{
+          cursor: pointer;
+        }
+      }
+    }
+      .line{
+        width: 95%;
+        height: 1px;
+        background-color: lightgrey;
+        justify-self: center;
+      }
+      .todaysection{
+        padding: 20px;
+        display: flex;
+        gap: 30px;
+
+        .sectiontext{
+          display: flex;
+          flex-direction: column;
+          flex: 1 ;
+
+          p{
+            margin: 0px;
+          }
+          .p1{
+            font-size: larger;
+          }
+          .p2{
+            font-size: smaller;
+            color: grey;
+            display: 1;
+          }
+
+          .sectionbuttons{
+            padding-top: 55px;
+            display: flex;
+            gap: 10px ;
+
+            button{
+              display: flex;
+              align-self: center;
+              gap: 5px;
+              align-items: center;
+              height: 20px;
+            }
+          }
+        }
+        .sectionphone{
+          align-self: flex-end;
+
+          button{
+            cursor: pointer;
+          }
+        }
+      }
+  }
+
+  .lateral{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+    .kittybot{
+      background-color: white;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      padding: 4%;
+      border: 1px solid lightgrey;
+
+      .kitty-1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+          font-size: 20px;
+        }
+        button{
+          background-color: orange;
+          border: 1px solid orange;
+          color: white;
+          border-radius: 30px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+        }
+        button:hover{
+          background-color: white;
+          color: orange;
+        }
+      }
+      .text{
+        color: grey;
+        font-size: 16px;
+      }
+      button{
+        background-color: orange;
+        border: 1px solid orange;
+        font: bold;
+        color: white;
+        padding: 2%;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: white;
+        color: orange;
+      }
+    }
+    .livechat{
+      background-color: white;
+      padding: 10px;
+      border: 1px solid lightgrey;
+
+
+      .live-1{
+        font-weight: bold;
+        font-size: smaller;
+        padding: 10px;
+        justify-self: center;
+      }
+      .linea{
+        width: 210px;
+        height: 1px;
+        background-color: lightgrey;
+        justify-self: center;
+        margin: 10px;
+      }
+      .live-2{
+        color: red;
+        font-weight: bold;
+        font-size: smaller;
+        padding: 10px;
+        // border-top: 1px solid lightgrey;
+        justify-self: center;
+      }
+      .profile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 15px;
+        img{
+          height: 50px;
+          width: 50px;
+          border-radius: 100px;
+        }
+        .infoprofile{
+          display: flex;
+          flex-direction: column;
+          p{
+            margin: 0px;
+            color: grey;
+            font-size: 14px;
+          }
+          button{
+            align-self: flex-start;
+            margin-top: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .tweets{
+      background-color: white;
+      padding: 20px;
+      border: 1px solid lightgrey;
+
+      .tweets-1{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .strong{
+          font-size: x-large;
+          font-weight: bold;
+          margin: 0px;
+        }
+        .grey{
+          color: grey;
+          font-weight: small;
+          margin: 0px;
+          align-self: flex-end;
+        }
+      }
+      .tweets-2{
+        color: lightskyblue;
+      }
+      .linea{
+        width: 210px;
+        height: 1px;
+        background-color: lightgrey;
+        justify-self: center;
+        margin: 10px;
+      }
+    }
+    .tweetprofile{
+      display: flex;
+      gap: 15px;
+
+      .tweetimgdiv{
+        display: flex;
+        align-items: center;
+      }
+      .tweetimg{
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+      }
+      .tweetname{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        p{
+          margin: 0px;
+        }
+      }
+      .tweetlogo{
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+    .tweetcontent{
+      padding-top: 10px;
+      .mention{
+        color: lightskyblue;
+      }
+    }
+}
+}
+
+@media (max-width: 1200px) {
+  body{
+    margin: 10px;
+  }
+  .pagina{
+    width: 100%;
+     margin-top: 90px;
+  }
+  .nav-container {
+    justify-content: space-between;
+     width: 100%;
+  }
+  .contenedor{
+    .lateral{
+      display: none;
+    }
+    .principal{
+      width: 100%;
+      flex: none;
+    }
+  }
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 600px){
+  body{
+    margin: 0;
+  }
+  .welcome{
+    display: none;
+  }
+  .contenedor{
+    .principal{
+      gap: 0px;
+    }
+  }
+}
+
