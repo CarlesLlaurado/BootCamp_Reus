@@ -4,6 +4,7 @@ const NUMERO_POKEMON = 1025;
 
 const loadingText = document.querySelector(".loading-text");
 const loading = document.querySelector("#loading");
+const paginacion = document.querySelector("#paginacion");
 
 const todosLosPokemon = [];
 
@@ -11,6 +12,7 @@ let URL = "https://pokeapi.co/api/v2/pokemon/";
 
 async function obtenerPokemon() {
     loading.style.display = "flex";
+    paginacion.style.display = "none";
     const pokemons = [];
 
     for (let i = 1; i <= NUMERO_POKEMON; i++) {
@@ -23,6 +25,7 @@ async function obtenerPokemon() {
     pokemons.forEach(poke => mostrarPokemon(poke));
 
     loading.style.display = "none";
+    paginacion.style.display = "flex";
 }
 
 
@@ -82,7 +85,10 @@ botonesTipos.forEach(boton => {
             loading.style.display = "none";
             return;
         } else if(tipoClicado === "random") {
-            
+            const randomPokemon = todosLosPokemon[Math.floor(Math.random() * todosLosPokemon.length)];
+            mostrarPokemon(randomPokemon)
+            loading.style.display = "none";
+            return;
         }
 
         const pokemonFiltrados = todosLosPokemon.filter(poke => poke.types.some(t => t.type.name === tipoClicado));
@@ -91,32 +97,6 @@ botonesTipos.forEach(boton => {
         loading.style.display = "none";
     });
 });
-
-// async function FiltrarTipo(tipoClicado) {
-
-//     listaPokemon.innerHTML = "";
-//     loading.style.display = "flex";
-//     const pokemonFiltrados = [];
-
-//     for (let i = 1; i <= NUMERO_POKEMON; i++) {
-//         const response = await fetch(URL + i);
-//         const data = await response.json();
-
-//         if (tipoClicado === "see-all") {
-//             todosLosPokemon.forEach(poke => mostrarPokemon(poke));
-//             loading.style.display = "none";
-//         } else {
-//             const tieneTipo = data.types.some(t => t.type.name === tipoClicado);
-
-//             if (tieneTipo) {
-//                 pokemonFiltrados.push(data);
-//             }
-//         }
-//     }
-//     pokemonFiltrados.forEach(poke => mostrarPokemon(poke));
-//     loading.style.display = "none";
-// }
-
 
 let puntos = 0;
 setInterval(() => {
