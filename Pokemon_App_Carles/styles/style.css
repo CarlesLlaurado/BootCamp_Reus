@@ -65,6 +65,32 @@ header{
 .nav img{
     width: 150px;
 }
+
+.search-container {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
+    order: 3;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--clr-white);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .15);
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: .2s;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+    transform: scale(1.02);
+}
+
 .nav-list{
     display: flex;
     align-items: center;
@@ -77,6 +103,7 @@ header{
     border-radius: 100px;
     cursor: pointer;
     text-transform: uppercase ;
+    text-decoration: none;
     font-weight: 600;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
     transition: .2s;
@@ -117,6 +144,13 @@ main{
     position: relative;
     isolation: isolate;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pokemon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 4rem -1rem rgba(0, 0, 0, .5);
 }
 .pokemon-id-back{
     position: absolute;
@@ -228,7 +262,7 @@ main{
 .btn-pag {
   padding: 0.5rem 1rem;
   border: none;
-  background-color: var(--clr-gray));
+  background-color: var(--clr-gray);
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
@@ -329,4 +363,141 @@ main{
 .fairy {
   background-color: var(--type-fairy);
   color: var(--clr-black);
+}
+
+/* Estilos para la página de detalles del Pokemon */
+.pokemon-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+.pokemon-detail-card {
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    isolation: isolate;
+}
+
+.pokemon-detail-card .pokemon-imagen img {
+    max-width: 12rem;
+    transition: transform 0.3s ease;
+}
+
+.pokemon-detail-card .pokemon-imagen img:hover {
+    transform: scale(1.1);
+}
+
+.pokemon-additional-info {
+    margin-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pokemon-additional-info h3 {
+    color: var(--clr-black);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.evolution{
+  margin: 1rem;
+}
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.stat-item {
+    background-color: var(--clr-gray);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.stat-item .stat-name {
+    font-size: 0.75rem;
+    color: var(--clr-black);
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+}
+
+.stat-item .stat-value {
+    font-weight: 600;
+    color: var(--clr-black);
+}
+
+.abilities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0 1rem;
+}
+
+.ability-item {
+    background-color: var(--clr-gray);
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Evolutions small cards */
+.evolutions-container {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.evolution-card {
+  background-color: var(--clr-white);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 1.5rem -0.5rem rgba(0,0,0,0.2);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.evolution-card img{
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.evolution-card .evo-name{
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.evolution-card .evo-id{
+  background-color: var(--clr-gray);
+  padding: 0.15rem 0.4rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+}
+
+.evolution-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 0 2rem -0.2rem rgba(0,0,0,0.3);
 }

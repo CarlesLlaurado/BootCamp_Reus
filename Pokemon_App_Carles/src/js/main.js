@@ -14,9 +14,9 @@ let listaActual = todosLosPokemon;
 const btnAnterior = document.querySelector("#anterior");
 const btnSiguiente = document.querySelector("#siguiente");
 
-const hoverSound = new Audio("../sounds/hover.wav");
+const hoverSound = new Audio("/sounds/hover.wav");
 hoverSound.preload = "auto";
-const clickSound = new Audio("../sounds/click.wav");
+const clickSound = new Audio("/sounds/click.wav");
 clickSound.preload = "auto";
 
 // track last hovered element to avoid multiple hover sounds when moving inside a card
@@ -167,11 +167,9 @@ function mostrarPokemon(poke) {
         // Guardar el pokémon seleccionado en localStorage
         localStorage.setItem('selectedPokemon', JSON.stringify(poke));
         // Redirigir a la página de detalles
-        window.location.href = 'pokemon.html';
+        window.location.href = '/pokemon.html';
     });
 
-    // hover handled globally by delegated listener
-    
     listaPokemon.append(div);
 }
 
@@ -231,8 +229,6 @@ btnSiguiente.addEventListener("click", () => {
     mostrarPagina(listaActual);
 });
 
-// hover for type buttons handled by delegated listener
-
 // Configuración del buscador
 const searchInput = document.querySelector("#searchInput");
 
@@ -277,6 +273,7 @@ searchInput.addEventListener("focus", () => {
 });
 
 
+
 // Reproducción de sonidos (delegación) para hover y click en toda la página
 document.addEventListener('mouseover', (e) => {
     try {
@@ -309,4 +306,3 @@ document.addEventListener('click', (e) => {
         }
     } catch (err) {}
 }, true);
-

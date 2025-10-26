@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Details - Carles' Pokedex</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" type="image/png" href="../images/pokeball.png">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <img src="../images/logo.svg" alt="Logo Pokédex">
+            <div class="nav-list">
+                <a href="index.html" class="btn btn-header" id="back-to-list">Back to Pokedex</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="pokemon-detail" class="pokemon-detail">
+            <!-- El contenido del Pokémon se cargará aquí dinámicamente -->
+            <div class="pokemon-detail-card">
+                <p class="pokemon-id-back" id="pokemon-id-back">#000</p>
+                <div class="pokemon-imagen">
+                    <img id="pokemon-image" src="" alt="pokemon">
+                </div>
+                <div class="pokemon-info">
+                    <div class="nombre-contenedor">
+                        <p class="pokemon-id" id="pokemon-id">#000</p>
+                        <h2 class="pokemon-nombre" id="pokemon-name">Pokemon Name</h2>
+                    </div>
+                    <div class="pokemon-tipos" id="pokemon-types">
+                        <!-- Los tipos se cargarán dinámicamente -->
+                    </div>
+                    <div class="pokemon-stats">
+                        <p class="stat" id="pokemon-height">Height: --</p>
+                        <p class="stat" id="pokemon-weight">Weight: --</p>
+                    </div>
+                    <div class="pokemon-additional-info">
+                        <h3>Base Stats</h3>
+                        <div class="stats-container" id="base-stats">
+                            <!-- Las estadísticas base se cargarán dinámicamente -->
+                        </div>
+                        <h3>Abilities</h3>
+                        <div class="abilities-container" id="abilities">
+                            <!-- Las habilidades se cargarán dinámicamente -->
+                        </div>
+                        <h3 class="evolution">Evolutions</h3>
+                        <div class="evolutions-container" id="evolutions">
+                            <!-- Evoluciones se cargarán dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./pokemon-detail.js"></script>
+</body>
+
+</html>
