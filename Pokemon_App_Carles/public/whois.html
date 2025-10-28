@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quién es este Pokémon?</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="icon" type="image/png" href="images/pokeball.png">
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <img src="images/logo.svg" alt="Logo Pokédex">
+      <div class="search-container">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="SEARCH POKEMON..."
+            class="search-input"
+        >
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item"><button class="btn btn-header" id="see-all">See all</button></li>
+        <li class="nav-item"><button class="btn btn-header normal" id="normal">Normal</button></li>
+        <li class="nav-item"><button class="btn btn-header fire" id="fire">Fire</button></li>
+        <li class="nav-item"><button class="btn btn-header water" id="water">Water</button></li>
+        <li class="nav-item"><button class="btn btn-header grass" id="grass">Grass</button></li>
+        <li class="nav-item"><button class="btn btn-header electric" id="electric">Electric</button></li>
+        <li class="nav-item"><button class="btn btn-header ice" id="ice">Ice</button></li>
+        <li class="nav-item"><button class="btn btn-header fighting" id="fighting">Fighting</button></li>
+        <li class="nav-item"><button class="btn btn-header poison" id="poison">Poison</button></li>
+        <li class="nav-item"><button class="btn btn-header ground" id="ground">Ground</button></li>
+        <li class="nav-item"><button class="btn btn-header flying" id="flying">Flying</button></li>
+        <li class="nav-item"><button class="btn btn-header psychic" id="psychic">Psychic</button></li>
+        <li class="nav-item"><button class="btn btn-header bug" id="bug">Bug</button></li>
+        <li class="nav-item"><button class="btn btn-header rock" id="rock">Rock</button></li>
+        <li class="nav-item"><button class="btn btn-header ghost" id="ghost">Ghost</button></li>
+        <li class="nav-item"><button class="btn btn-header dark" id="dark">Dark</button></li>
+        <li class="nav-item"><button class="btn btn-header dragon" id="dragon">Dragon</button></li>
+        <li class="nav-item"><button class="btn btn-header steel" id="steel">Steel</button></li>
+        <li class="nav-item"><button class="btn btn-header fairy" id="fairy">Fairy</button></li>
+        <li class="nav-item"><button class="btn btn-header" id="random">Random</button></li>
+        <li class="nav-item"><button class="btn btn-header" id="mini">Mini juego</button></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="whois-container">
+      <h1 class="whois-title">¿Quién es este Pokémon?</h1>
+
+      <div class="whois-card">
+        <div class="image-wrapper">
+          <img id="pokemonSilhouette" src="" alt="silhouette pokemon">
+        </div>
+
+        <div class="guess-controls">
+          <input id="guessInput" type="text" placeholder="Escribe el nombre del Pokémon" autocomplete="off">
+          <button id="guessBtn" class="btn">Adivinar</button>
+        </div>
+
+        <p id="guessMessage" class="guess-message"></p>
+
+        <div id="confettiWrapper" class="confetti-wrapper" aria-hidden="true"></div>
+
+        <div class="whois-actions">
+          <a href="/index.html" class="btn btn-header">Volver</a>
+          <button id="newRand" class="btn btn-header">Nuevo Pokémon</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="src/js/guess.js"></script>
+</body>
+
+</html>
