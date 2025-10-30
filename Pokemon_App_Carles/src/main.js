@@ -1,6 +1,7 @@
 const listaPokemon = document.querySelector("#listaPokemon");
 const botonesTipos = document.querySelectorAll(".btn-header");
-const NUMERO_POKEMON = 1025;
+const NUMERO_POKEMON = 151;
+localStorage.setItem("NUMERO_POKEMON", NUMERO_POKEMON);
 
 const loadingText = document.querySelector(".loading-text");
 const loading = document.querySelector("#loading");
@@ -11,6 +12,7 @@ const todosLosPokemon = [];
 let paginaActual = 1;const pokemonPorPagina = 18;
 
 let listaActual = todosLosPokemon;
+
 const btnAnterior = document.querySelector("#anterior");
 const btnSiguiente = document.querySelector("#siguiente");
 
@@ -192,9 +194,11 @@ botonesTipos.forEach(boton => {
             return;
         } else if (tipoClicado === "random") {
             const randomPokemon = todosLosPokemon[Math.floor(Math.random() * todosLosPokemon.length)];
-            mostrarPokemon(randomPokemon)
-            loading.style.display = "none";
-            paginacion.style.display = "none";
+            localStorage.setItem('selectedPokemon', JSON.stringify(randomPokemon));
+            window.location.href = 'pokemon.html'
+            return;
+        } else if (tipoClicado === "quien") {
+            window.location.href = "quien.html"
             return;
         }
 

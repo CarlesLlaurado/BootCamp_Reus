@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quién es este Pokémon?</title>
+  <link rel="stylesheet" href="../styles/quien.css">
+  <link rel="icon" type="image/png" href="../images/pokeball.png">
+</head>
+
+<body>
+  <header>
+    <h1>¿Quién es este Pokémon?</h1>
+  </header>
+
+  <div class="loading" id="loading">
+    <div class="loading-content">
+      <img src="../images/pokeball.png" alt="pokeball loading" class="pokeball-loading">
+      <p class="loading-text">Cargando Pokédex...</p>
+    </div>
+  </div>
+
+  <main class="whatis-container">
+    <div class="pokemon-shadow">
+      <img id="whatis-image" alt="Adivina el Pokémon">
+    </div>
+
+    <div class="input-area">
+      <input id="guessInput" type="text" placeholder="Escribe el nombre...">
+      <button id="checkButton">Comprobar</button>
+    </div>
+
+    <p id="feedback"></p>
+
+    <div class="controls">
+      <button id="changePokemon">Cambiar Pokémon</button>
+      <button id="playAgain" style="display:none;">Jugar de nuevo</button>
+      <button id="backToList">Volver</button>
+    </div>
+  </main>
+
+  <script src="./quien.js"></script>
+</body>
+</html>
